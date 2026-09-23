@@ -1,11 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
-
-// No Vite, as variáveis de ambiente devem ter o prefixo VITE_ e são acessadas por import.meta.env
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('As variáveis VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY precisam estar definidas no arquivo .env');
-}
+const supabaseUrl = https://mneyifneyierorcswfqr.supabase.co;
+const supabaseAnonKey = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1uZXlpZm5leWllcm9yY3N3ZnFyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQ1MzQ0NzUsImV4cCI6MjEwMDExMDQ3NX0.IkP5Avsj4B0N3hedPu2Vrdx0MCleDHbAkC7ZOLh5sJk;
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
