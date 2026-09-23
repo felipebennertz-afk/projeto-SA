@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almoxarifado - Lista de Itens</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="dashboard-layout">
+  <nav class="navbar">
+    <div class="navbar-brand">📦 Almoxarifado</div>
+    <div>
+      <a href="/dashboard.html" class="btn btn-secondary">Voltar ao Painel</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="page-header animate-fade-in">
+      <h2>Controle de Itens</h2>
+      <a href="/cadastro.html" class="btn">Novo Item</a>
+    </div>
+
+    <!-- Abas -->
+    <div class="animate-fade-in" style="margin-bottom: 1rem; display: flex; gap: 0.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+      <button id="btn-tab-estoque" class="btn" style="background-color: var(--accent-color);">📦 Estoque Atual</button>
+      <button id="btn-tab-historico" class="btn btn-secondary">🕒 Histórico de Retiradas</button>
+    </div>
+
+    <!-- Filtro de Pesquisa -->
+    <div class="animate-fade-in" style="margin-bottom: 1rem;">
+      <input type="text" id="searchInput" placeholder="Pesquisar por nome, usuário, etc..." style="width: 100%; max-width: 400px; padding: 0.75rem 1rem; border-radius: 8px;">
+    </div>
+    
+    <!-- Tabela de Estoque -->
+    <div id="tab-estoque" class="glass-panel animate-fade-in table-container">
+      <table id="itensTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome do Produto</th>
+            <th>Quantidade</th>
+            <th>Condição</th>
+          </tr>
+        </thead>
+        <tbody id="itensBody">
+          <tr>
+            <td colspan="4" style="text-align: center; color: var(--text-secondary);">Carregando itens...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Tabela de Histórico -->
+    <div id="tab-historico" class="glass-panel animate-fade-in table-container" style="display: none;">
+      <table id="historicoTable">
+        <thead>
+          <tr>
+            <th>ID Retirada</th>
+            <th>Item Associado</th>
+            <th>Usuário (Quem retirou)</th>
+            <th>Qtd. Retirada</th>
+            <th>Data Retirada</th>
+            <th>Data Devolução</th>
+          </tr>
+        </thead>
+        <tbody id="historicoBody">
+          <tr>
+            <td colspan="6" style="text-align: center; color: var(--text-secondary);">Carregando histórico...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  
+  <script type="module" src="/src/itens.js"></script>
+</body>
+</html>

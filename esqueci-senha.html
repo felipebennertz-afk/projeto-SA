@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almoxarifado - Recuperar Senha</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="glass-panel auth-box animate-fade-in">
+      <h1>Recuperar Senha</h1>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem;">Digite seu e-mail para receber um link de redefinição de senha.</p>
+      
+      <form id="recuperarForm">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" required>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Enviar Link de Recuperação</button>
+        
+        <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.875rem;">
+          <span style="color: var(--text-secondary);">Lembrou a senha? <a href="/index.html" style="color: var(--accent-color); text-decoration: none; font-weight: 500;">Voltar ao Login</a></span>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script type="module" src="/src/esqueci-senha.js"></script>
+</body>
+</html>

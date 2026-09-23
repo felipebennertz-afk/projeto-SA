@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almoxarifado - Retirar Item</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="dashboard-layout">
+  <nav class="navbar">
+    <div class="navbar-brand">📦 Almoxarifado</div>
+    <div>
+      <a href="/dashboard.html" class="btn btn-secondary">Voltar ao Painel</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="page-header animate-fade-in">
+      <h2>Retirada de Materiais</h2>
+    </div>
+    
+    <div class="glass-panel animate-fade-in" style="max-width: 600px; margin: 0 auto;">
+      <form id="retiradaForm">
+        <div class="form-group">
+          <label for="itemSelect">Selecione o Item</label>
+          <select id="itemSelect" required>
+            <option value="" disabled selected>Carregando itens...</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="usuario">Usuário (Quem vai retirar)</label>
+          <input type="text" id="usuario" placeholder="Ex: João da Silva" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="quantidade">Quantidade a Retirar</label>
+          <input type="number" id="quantidade" placeholder="Ex: 2" min="1" required>
+        </div>
+
+        <div style="display: flex; gap: 1rem;">
+          <div class="form-group" style="flex: 1;">
+            <label for="dataRetirada">Data de Retirada</label>
+            <input type="date" id="dataRetirada" required>
+          </div>
+          
+          <div class="form-group" style="flex: 1;">
+            <label for="dataDevolucao">Data de Devolução (Opcional)</label>
+            <input type="date" id="dataDevolucao">
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+          <button type="submit" class="btn" style="flex: 1; background-color: #f59e0b;">Registrar Retirada</button>
+          <button type="button" id="limparBtn" class="btn btn-secondary" style="flex: 1;">Limpar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <script type="module" src="/src/retirada.js"></script>
+</body>
+</html>

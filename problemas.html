@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almoxarifado - Verificar Problemas</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="dashboard-layout">
+  <nav class="navbar">
+    <div class="navbar-brand">📦 Almoxarifado</div>
+    <div>
+      <a href="/dashboard.html" class="btn btn-secondary">Voltar ao Painel</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="page-header animate-fade-in">
+      <h2>Registro de Problemas (Suporte)</h2>
+    </div>
+    
+    <div class="glass-panel animate-fade-in" style="max-width: 600px; margin: 0 auto;">
+      <form id="problemaForm">
+        <div class="form-group">
+          <label for="usuario">Usuário / Requisitante</label>
+          <input type="text" id="usuario" placeholder="Ex: Maria" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="problema">Problema Relatado</label>
+          <select id="problema" required>
+            <option value="" disabled selected>Selecione um problema</option>
+            <option value="Meu computador nao liga">Meu computador não liga</option>
+            <option value="A tela do meu notebook nao liga">A tela do meu notebook não liga</option>
+            <option value="A tela do meu notebook quebrou">A tela do meu notebook quebrou</option>
+            <option value="Meu notebook esta com problema para carregar">Meu notebook está com problema para carregar</option>
+            <option value="O touchpad do meu notebook nao esta funcionando">O touchpad do meu notebook não está funcionando</option>
+            <option value="Meu monitor nao liga">Meu monitor não liga</option>
+            <option value="Meu monitor liga mas nao da imagem">Meu monitor liga mas não dá imagem</option>
+            <option value="Meu monitor quebrou">Meu monitor quebrou</option>
+            <option value="Meu computador esta com pouco amarzenamento">Meu computador está com pouco armazenamento</option>
+            <option value="A internet do computador nao esta funcionando">A internet do computador não está funcionando</option>
+            <option value="Meu computador esta travando">Meu computador está travando</option>
+            <option value="O horario do meu computador esta errado">O horário do meu computador está errado</option>
+            <option value="O meu teclado esta desgastado">O meu teclado está desgastado</option>
+            <option value="Outros...">Outros...</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Dica / Solução Prévia:</label>
+          <div id="dicaSolucao" style="padding: 1rem; background-color: rgba(59, 130, 246, 0.1); border-left: 4px solid var(--accent-color); border-radius: 4px; min-height: 50px; color: var(--text-secondary);">
+            Selecione um problema para ver possíveis soluções rápidas.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="diaDisponivel">Dia Disponível para Suporte</label>
+          <select id="diaDisponivel" required>
+            <option value="" disabled selected>Selecione um dia</option>
+            <option value="Segunda-Feira">Segunda-Feira</option>
+            <option value="Terca-Feira">Terça-Feira</option>
+            <option value="Quarta-Feira">Quarta-Feira</option>
+            <option value="Quinta-Feira">Quinta-Feira</option>
+            <option value="Sexta-Feira">Sexta-Feira</option>
+          </select>
+        </div>
+
+        <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+          <button type="submit" class="btn" style="flex: 1;">Registrar Chamado</button>
+          <button type="button" id="limparBtn" class="btn btn-secondary" style="flex: 1;">Limpar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <script type="module" src="/src/problemas.js"></script>
+</body>
+</html>

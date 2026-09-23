@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almoxarifado - Dashboard</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="dashboard-layout">
+  <nav class="navbar">
+    <div class="navbar-brand">📦 Almoxarifado</div>
+    <div>
+      <span id="userEmail" style="margin-right: 1rem; color: var(--text-secondary);"></span>
+      <button id="logoutBtn" class="btn btn-secondary">Sair</button>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="page-header animate-fade-in">
+      <h2>Painel de Controle</h2>
+    </div>
+    
+    <div class="glass-panel animate-fade-in" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+      
+      <a href="/cadastro.html" style="text-decoration: none;">
+        <div class="glass-panel" style="text-align: center; cursor: pointer; transition: transform 0.2s;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">➕</h3>
+          <h3 style="color: var(--text-primary);">Cadastrar Item</h3>
+          <p style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">Adicionar novos itens ao estoque.</p>
+        </div>
+      </a>
+      
+      <a href="/itens.html" style="text-decoration: none;">
+        <div class="glass-panel" style="text-align: center; cursor: pointer; transition: transform 0.2s;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">📋</h3>
+          <h3 style="color: var(--text-primary);">Lista de Itens</h3>
+          <p style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">Visualizar todos os itens em estoque.</p>
+        </div>
+      </a>
+      
+      <a href="/retirada.html" style="text-decoration: none;">
+        <div class="glass-panel" style="text-align: center; cursor: pointer; transition: transform 0.2s;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">📤</h3>
+          <h3 style="color: var(--text-primary);">Retirar Item</h3>
+          <p style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">Registrar a saída de materiais.</p>
+        </div>
+      </a>
+      
+      <a href="/problemas.html" style="text-decoration: none;">
+        <div class="glass-panel" style="text-align: center; cursor: pointer; transition: transform 0.2s;">
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">🛠️</h3>
+          <h3 style="color: var(--text-primary);">Verificar Problemas</h3>
+          <p style="color: var(--text-secondary); font-size: 0.875rem; margin-top: 0.5rem;">Registrar chamados de TI e suporte.</p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+  
+  <script type="module" src="/src/dashboard.js"></script>
+</body>
+</html>
