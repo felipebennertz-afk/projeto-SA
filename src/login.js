@@ -23,16 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Login com Google
   googleLoginBtn.addEventListener('click', async () => {
-    // Pegar a URL atual e garantir que redirecione para dashboard.html mantendo o subdiretório (Github Pages)
-    const currentPath = window.location.pathname;
-    const basePath = currentPath.substring(0, currentPath.lastIndexOf('/'));
-    const redirectUrl = window.location.origin + basePath + '/dashboard.html';
-
     const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: redirectUrl
-      }
+      provider: 'google'
     });
     
     if (error) {
