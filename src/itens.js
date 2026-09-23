@@ -1,4 +1,4 @@
-import { supabase } from './supabase.js';
+import { supabase } from './../.env/supabase.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   // Verifica auth

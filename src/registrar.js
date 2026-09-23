@@ -1,4 +1,4 @@
-import { supabase } from './supabase.js';
+import { supabase } from './../.env/supabase.js';
 import { showToast } from './toast.js';
 
 console.log("Script registrar.js carregado!");
