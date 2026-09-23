@@ -17,16 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
   async function checkUser() {
     const { data: { session } } = await supabase.auth.getSession();
     if (session) {
-      window.location.href = '/dashboard.html';
+      window.location.href = './dashboard.html';
     }
   }
 
   // Login com Google
   googleLoginBtn.addEventListener('click', async () => {
+    // Pegar a URL atual e garantir que redirecione para dashboard.html mantendo o subdiretório (Github Pages)
+    const currentPath = window.location.pathname;
+    const basePath = currentPath.substring(0, currentPath.lastIndexOf('/'));
+    const redirectUrl = window.location.origin + basePath + '/dashboard.html';
+
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: window.location.origin + '/dashboard.html'
+        redirectTo: redirectUrl
       }
     });
     
@@ -55,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       showToast('Login realizado com sucesso!', 'success');
       setTimeout(() => {
-        window.location.href = '/dashboard.html';
+        window.location.href = './dashboard.html';
       }, 1000);
     }
   });

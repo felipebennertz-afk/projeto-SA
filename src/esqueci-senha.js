@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       showToast('Se este e-mail estiver cadastrado, você receberá um link na sua caixa de entrada.', 'success');
       setTimeout(() => {
-        window.location.href = '/index.html';
+        window.location.href = './index.html';
       }, 1500);
     }
   });

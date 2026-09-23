@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   if (!session) {
     // Redireciona para o login se não estiver logado
-    window.location.href = '/index.html';
+    window.location.href = './index.html';
     return;
   }
   
@@ -16,6 +16,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Lógica de Logout
   document.getElementById('logoutBtn').addEventListener('click', async () => {
     await supabase.auth.signOut();
-    window.location.href = '/index.html';
+    window.location.href = './index.html';
   });
 });

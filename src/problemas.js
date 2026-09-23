@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Verifica auth
   const { data: { session } } = await supabase.auth.getSession();
   if (!session) {
-    window.location.href = '/index.html';
+    window.location.href = './index.html';
     return;
   }
 
