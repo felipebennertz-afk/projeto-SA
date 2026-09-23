@@ -1,4 +1,4 @@
-import { supabase } from './../.env/supabase.js';
+import { supabase } from './supabase.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   // Verifica se o usuário está logado

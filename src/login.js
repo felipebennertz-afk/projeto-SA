@@ -1,4 +1,4 @@
-import { supabase } from './../.env/supabase.js';
+import { supabase } from './supabase.js';
 import { showToast } from './toast.js';
 
 console.log("Script login.js carregado!");
